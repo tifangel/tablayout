@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_20"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/abArticle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0dp">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/tbArticleNews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/toolbarDark">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/subtitle1"
+                    android:textColor="@android:color/white"
+                    android:text="@string/news"/>
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorPrimary">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vpArticle"
+                android:background="@color/grey_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tlArticle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:tabSelectedTextColor="@android:color/white"
+                    app:tabTextColor="@color/grey_60"
+                    app:tabMode="scrollable"
+                    app:tabIndicatorColor="@color/primary_gold"
+                    app:tabTextAppearance="@style/button2"
+                    app:tabPaddingEnd="22dp"
+                    app:tabPaddingStart="12dp"
+                    app:tabIndicatorHeight="3dp"
+                    android:background="@color/colorPrimary">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all_category"/>
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/news"/>
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/event"/>
+
+                </com.google.android.material.tabs.TabLayout>
+
+            </androidx.viewpager.widget.ViewPager>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
